@@ -121,7 +121,7 @@ public class AccountController : ControllerBase
         var client = await _clientServices.GetById(clientID);
 
         if (client is null)
-            result = $"El cliente  {clientID} no existe.";
+            result = $"El cliente o usuario {clientID} no existe.";
 
         return result;
 
