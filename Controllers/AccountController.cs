@@ -35,7 +35,7 @@ public class AccountController : ControllerBase
         var account = await _accountServices.GetByIdDto(id);
 
         if (account is null)
-            return NotFound(new { message = $"El cliente con ID = {id} no existe." });
+            return NotFound(new { message = $"El cliente con el ID = {id} no existe." });
 
         return account;
     }
@@ -74,7 +74,7 @@ public class AccountController : ControllerBase
         }
         else
         {
-            return NotFound(new { message = $"El cliente con ID = {id} no existe." });
+            return NotFound(new { message = $"El cliente con el ID = {id} no existe." });
 
         }
 
@@ -95,7 +95,7 @@ public class AccountController : ControllerBase
         }
         else
         {
-            return NotFound(new { message = $"El cliente con ID = {id} no existe." });
+            return NotFound(new { message = $"El cliente con el ID = {id} no existe." });
             //ClientNotFound(id);   //3
         }
 
@@ -121,7 +121,7 @@ public class AccountController : ControllerBase
         var client = await _clientServices.GetById(clientID);
 
         if (client is null)
-            result = $"El cliente  {clientID} no existe.";
+            result = $"El cliente o usuario {clientID} no existe.";
 
         return result;
 
